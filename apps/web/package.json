@@ -1,0 +1,39 @@
+{
+  "name": "@company/web",
+  "version": "0.0.0",
+  "dependencies": {
+    "@company/cms": "workspace:*",
+    "@company/ui": "workspace:*",
+    "@next/bundle-analyzer": "15.2.4",
+    "next": "15.2.4",
+    "next-sanity": "9.9.9",
+    "postcss": "8.5.3",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "zod": "3.24.2"
+  },
+  "devDependencies": {
+    "@company/config-tailwind": "workspace:*",
+    "@company/config-typescript": "workspace:*",
+    "@tailwindcss/postcss": "4.1.1",
+    "@testing-library/dom": "10.4.0",
+    "@testing-library/react": "16.2.0",
+    "@types/node": "22.13.17",
+    "@types/react": "19.1.0",
+    "@types/react-dom": "19.1.1",
+    "@vitejs/plugin-react": "4.3.4",
+    "jsdom": "26.0.0",
+    "typescript": "5.8.2",
+    "vite-tsconfig-paths": "5.1.4",
+    "vitest": "3.1.1"
+  },
+  "scripts": {
+    "build": "next build",
+    "build:analyze": "ANALYZE=true pnpm build",
+    "check-types": "tsc",
+    "clean": "rm -rf .next .turbo node_modules next-env.d.ts tsconfig.tsbuildinfo",
+    "dev": "next dev --turbopack",
+    "start": "next start",
+    "test": "vitest"
+  }
+}

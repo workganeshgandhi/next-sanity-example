@@ -1,0 +1,45 @@
+{
+  "name": "@company/docs",
+  "version": "0.0.0",
+  "dependencies": {
+    "@company/ui": "workspace:*",
+    "react": "19.1.0",
+    "react-dom": "19.1.0"
+  },
+  "devDependencies": {
+    "@chromatic-com/storybook": "3.2.6",
+    "@company/config-tailwind": "workspace:*",
+    "@company/config-typescript": "workspace:*",
+    "@storybook/addon-a11y": "8.6.11",
+    "@storybook/addon-designs": "8.2.1",
+    "@storybook/addon-essentials": "8.6.11",
+    "@storybook/addon-queryparams": "7.0.1",
+    "@storybook/addon-storysource": "8.6.11",
+    "@storybook/addon-themes": "8.6.11",
+    "@storybook/blocks": "8.6.11",
+    "@storybook/experimental-addon-test": "8.6.11",
+    "@storybook/experimental-nextjs-vite": "8.6.11",
+    "@storybook/react": "8.6.11",
+    "@storybook/test": "8.6.11",
+    "@tailwindcss/vite": "4.1.0",
+    "@types/node": "22.13.17",
+    "@types/react": "19.1.0",
+    "@types/react-dom": "19.1.1",
+    "@vitest/browser": "3.1.1",
+    "next": "15.2.4",
+    "playwright": "1.51.1",
+    "storybook": "8.6.11",
+    "storybook-dark-mode": "4.0.2",
+    "typescript": "5.8.2",
+    "vite": "6.2.4",
+    "vitest": "3.1.1"
+  },
+  "scripts": {
+    "build": "storybook build",
+    "check-types": "tsc",
+    "clean": "rm -rf .next .turbo node_modules storybook-static tsconfig.tsbuildinfo",
+    "dev": "storybook dev -p 6006 --no-open",
+    "test": "vitest"
+  },
+  "type": "module"
+}

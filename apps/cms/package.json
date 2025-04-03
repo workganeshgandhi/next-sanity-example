@@ -1,0 +1,45 @@
+{
+  "name": "@company/cms",
+  "version": "0.0.0",
+  "dependencies": {
+    "@sanity/icons": "3.7.0",
+    "@sanity/image-url": "1.1.0",
+    "@sanity/vision": "3.82.0",
+    "@t3-oss/env-core": "0.12.0",
+    "@t3-oss/env-nextjs": "0.12.0",
+    "groq": "3.82.0",
+    "next-sanity": "9.9.9",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "sanity": "3.82.0",
+    "sanity-plugin-media": "3.0.2",
+    "styled-components": "6.1.16",
+    "zod": "3.24.2"
+  },
+  "devDependencies": {
+    "@company/config-typescript": "workspace:*",
+    "@sanity/assist": "3.2.2",
+    "@sanity/client": "6.28.4",
+    "@types/react": "19.1.0",
+    "chokidar-cli": "3.0.0",
+    "typescript": "5.8.2"
+  },
+  "exports": {
+    "./client/*": "./src/client/*.ts",
+    "./queries/*": "./src/queries/*.ts",
+    "./types": "./sanity.types.ts"
+  },
+  "scripts": {
+    "build": "sanity build",
+    "check-types": "tsc",
+    "clean": "rm -rf .sanity .turbo dist node_modules tsconfig.tsbuildinfo",
+    "deploy": "sanity deploy",
+    "dev": "sanity dev",
+    "prebuild": "pnpm schema-extract && pnpm typegen-generate",
+    "predev": "pnpm schema-extract && pnpm typegen-generate",
+    "schema-extract": "sanity schema extract --enforce-required-fields",
+    "start": "sanity start",
+    "typegen-generate": "sanity typegen generate",
+    "watch": "chokidar 'src/**' -c 'pnpm schema-extract && pnpm typegen-generate'"
+  }
+}
